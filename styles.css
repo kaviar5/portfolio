@@ -1,0 +1,128 @@
+/* Full viewport styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Spline Background Container */
+#splineContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Loading Screen */
+#loadingScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Loading Bar */
+#loadingBarContainer {
+    width: 60%;
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#loadingBar {
+    width: 0;
+    height: 100%;
+    background-color: #333;
+    transition: width 1.5s ease;
+}
+
+/* Loading Screen Hidden */
+#loadingScreen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease;
+}
+
+/* Main Content Hidden Initially */
+#content {
+    display: none;
+    z-index: 1;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+/* About Section Styling */
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+}
+
+.section h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.section p {
+    font-size: 1.5em;
+    max-width: 600px;
+    color: #cccccc;
+}
+
+/* Enter Button Styling */
+#enterButton {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+#enterButton:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Ensure Canvas Styles */
+#canvas3d {
+    width: 100%;
+    height: 100%;
+    display: block; /* Prevent any default inline display issues */
+}
+
+#hide-spline {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    width: 200px;
+    background-color: #5b5b5b;
+    z-index: 999999999;
+}

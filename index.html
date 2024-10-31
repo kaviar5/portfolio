@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lazydev_kaviar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://prod.spline.design/spline.js"></script> <!-- Spline Script -->
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+        <p id="loadingText">I'm waking up...</p>
+        <div id="loadingBarContainer">
+            <div id="loadingBar"></div>
+        </div>
+    </div>
+
+    <!-- Spline Background -->
+    <div id="splineContainer">
+        <!-- Spline model will be embedded here -->
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.35/build/spline-viewer.js"
+    ></script>
+    <div>
+        <spline-viewer
+        url="https://prod.spline.design/kBA9fad7cYycuW1K/scene.splinecode"
+        style="display: none; position: absolute;"
+        id="spline-content"
+      ></spline-viewer>
+  
+      <!-- Main Content -->
+      <div id="content" style="display: none; z-index: 999;pointer-events: none;"> <!-- Initially hidden -->
+          <section class="section" id="about">
+              <h1>Hi.</h1>
+              <p>A makeshift portfolio website, cuz Aahnik told me to</p>
+              <button id="enterButton" style="pointer-events: all;">Enter</button>
+          </section>
+      </div>
+    </div>
+
+    <div id="hide-spline" style="display: none;">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
